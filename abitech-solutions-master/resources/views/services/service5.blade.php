@@ -34,7 +34,8 @@
 </div><h2 class="animated zoomIn">DISCUTER AVEC QUELQU’UN</h2>
           <div  class="animated zoomIn "style="display: flex; justify-content:center;  ; align-items: center;">
                         <!-- Bouton d'appel téléphonique -->
-                        
+                        <a href="{{route('formation')}}" class="btn btn-danger @if(Route::currentRouteName() == 'formation') active @endif">Nos formations</a>
+
                         <form action="tel:+22996395247">
                             <button type="submit" class="btn btn-primary" >
                                 <i class="fas fa-phone"></i> Appeler
@@ -52,7 +53,7 @@
                         </form>
                     </div>
           </div>
-          
+
         </div>
           </div>
         </div>
