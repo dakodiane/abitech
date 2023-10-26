@@ -77,3 +77,14 @@ Route::get('/formation/{id}/view', [FormationController::class, 'view'])->name('
 //});
 
 Route::get('/login', function () {return view('session/login-session');})->name('login');
+
+Route::get('/service1', function () {return view('services/service1');})->name('service1');
+
+Route::get('/service2', function () {return view('services/service2');})->name('service2');
+
+Route::get('/service3', function () {return view('services/service3');})->name('service3');
+
+Route::get('/service4', function () {return view('services/service4');})->name('service4');
+
+Route::get('/service5', function () {return view('services/service5');})->name('service5');
+
