@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top px-4 px-lg-5 py-3 py-lg-0">
         <div class="container">
             <a href="{{route('welcome')}}" class="navbar-brand p-0 d-flex align-items-center">
-                <img src="{{asset('assets/img/logos/favicon.png')}}" alt="Logo" class="mt-1" width="75" height="75">
+                <img src="{{asset('assets/img/logos/faviconnew.png')}}" alt="Logo" class="mt-1" width="75" height="75">
                 <h1 class="m-0">Abitech Solution</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" id="toggleButton">
