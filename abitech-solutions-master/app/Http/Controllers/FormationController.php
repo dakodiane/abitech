@@ -26,6 +26,11 @@ class FormationController extends Controller
        
         return view('formations/index');
     }
+    public function search(ListRequest $request):  View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+       
+        return view('landing-page/formations/search');
+    }
 
 
    
