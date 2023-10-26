@@ -145,7 +145,7 @@
         <li class="list-group-item">Formation complète en administration et gestion de bases de données</li>
         <li class="list-group-item">Formation en photoshop et montage vidéo</li>
         <li class="list-group-item">Formation complète en architechture</li>
-        <li class="list-group-item">Toute autre formation, spécifique et spécialisée selon vos besoins.</li>
+        <li class="list-group-item">Toute autre formation, spécifique et spécialisée selon vos besoins.</li> 
     </ul>
 
     <br><p>Envie d'une formation ?</p>
