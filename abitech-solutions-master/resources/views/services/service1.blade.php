@@ -19,7 +19,7 @@
      <div class="card mb-3" >
        <div class="row g-0">
          <div class="col-md-6 " >
-        <img class="img-fluid"src="{{asset(asset('img/presta.jpeg'))}}" alt=" service photo" >
+        <img class="img-fluid"src="{{asset(asset('img/prestat.JPG'))}}" alt=" service photo" >
         </div>
          <div class="col-md-6">
            <div class="card-body">

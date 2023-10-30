@@ -19,7 +19,7 @@
      <div class="card mb-3" >
        <div class="row g-0">
          <div class="col-md-6">
-         <img class="img-fluid" src="{{asset(asset('img/formation.jpeg'))}}" alt=" photo formation" style="height: 220px;">
+         <img class="img-fluid" src="{{asset(asset('img/Form.jpg'))}}" alt=" photo formation" style="height: 220px;">
         </div>
          <div class="col-md-6">
            <div class="card-body">
