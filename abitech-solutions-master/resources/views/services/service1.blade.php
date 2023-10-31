@@ -24,7 +24,7 @@
          <div class="col-md-6">
            <div class="card-body">
             
-             <p class="card-text  fs-3 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Nous sommes dans la fourniture et l’entretien de matériels informatique et électroniques, la conception de site web professionnel mais aussi des application et logiciels pour usage professionnel ou individuel. Nous intervenons aussi sur les stratégies marketing et les conseils communicationnels </p>
+             <p class="card-text  fs-4 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Nous sommes dans la fourniture et l’entretien de matériels informatique et électroniques, la conception de site web professionnel mais aussi des application et logiciels pour usage professionnel ou individuel. Nous intervenons aussi sur les stratégies marketing et les conseils communicationnels </p>
            </div>
          </div>
        </div>

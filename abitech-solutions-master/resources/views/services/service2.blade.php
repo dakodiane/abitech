@@ -37,7 +37,7 @@
     <div class="py-6" style="margin-top: -10rem;">
         <div class="container">
             <div class="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h2 class="mb-5">Aviez vous besoins de conseil, n'hésitez pas à nous faire part de vos préoccupation.</h2>
+                <h2 class="mb-5">Avez vous besoins d'un conseil, n'hésitez pas à nous faire part de vos préoccupations.</h2>
             </div>
             <div class="row justify-content-center" >
                 <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.3s">

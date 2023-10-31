@@ -24,7 +24,7 @@
          <div class="col-md-6">
            <div class="card-body">
             
-             <p class="card-text  fs-3 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Vous avez besoin d’améliorer les compétences de vos employés en entreprise sur les logiciels et applications standards, quel que soit le domaine ; nous disposons des professionnels qualifiés disponibles pour répondre efficacement à vos besoins et vous donner le plein d’astuces pour vous et vos collaborateurs. Laissez-nous un mot sur le type de formation que vous désirez et nous nous chargeons du reste.</p>
+             <p class="card-text  fs-6"  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Vous avez besoin d’améliorer les compétences de vos employés en entreprise sur les logiciels et applications standards, quel que soit le domaine ; nous disposons des professionnels qualifiés disponibles pour répondre efficacement à vos besoins et vous donner le plein d’astuces pour vous et vos collaborateurs. Laissez-nous un mot sur le type de formation que vous désirez et nous nous chargeons du reste.</p>
            </div>
          </div>
        </div>
@@ -35,7 +35,7 @@
           <div  class="animated zoomIn "style="display: flex; justify-content:center;  ; align-items: center;">
                         <!-- Bouton d'appel téléphonique -->
                         <a href="{{route('formation')}}" class="btn btn-danger @if(Route::currentRouteName() == 'formation') active @endif">Nos formations</a>
-
+                        <div style="width: 20px;"></div>
                         <form action="tel:+22996395247">
                             <button type="submit" class="btn btn-primary" >
                                 <i class="fas fa-phone"></i> Appeler

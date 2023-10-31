@@ -24,7 +24,7 @@
          <div class="col-md-6">
            <div class="card-body">
             
-             <p class="card-text  fs-3 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Nous vous accompagnons dans le processus de déploiement de vos équipements informatiques et autres dans le but de vous offrir un canal de distribution et de vente rapproché de sorte a augmenté votre clientèle dans la zone Afrique. Confiez-nous vos produits et nous ferons en sorte qu’ils prospèrent.</p>
+             <p class="card-text  fs-4 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Nous vous accompagnons dans le processus de déploiement de vos équipements informatiques et autres dans le but de vous offrir un canal de distribution et de vente rapproché de sorte a augmenté votre clientèle dans la zone Afrique. Confiez-nous vos produits et nous ferons en sorte qu’ils prospèrent.</p>
            </div>
          </div>
        </div>

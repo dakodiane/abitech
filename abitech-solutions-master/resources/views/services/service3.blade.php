@@ -25,7 +25,7 @@
          <div class="col-md-6">
            <div class="card-body">
             
-             <p class="card-text  fs-3 "  style="text-align: justify; font-family:'Times New Roman', Times, serif;">Vous avez une entreprise, une entreprise, un commerce, une activité quelconque et vous avez besoin de visibilité ; vous êtes à la bonne adresse !! Nous vous offrons un canal de communication à travers notre web émission dans laquelle vous avez la possibilité de faire la lumière sur vous et votre activité en reportage, interview, publicité où un direct.
+             <p class="card-text fs-5"  style="text-align: justify; font-family:'Times New Roman', Times, serif; ">Vous avez une entreprise, une entreprise, un commerce, une activité quelconque et vous avez besoin de visibilité ; vous êtes à la bonne adresse !! Nous vous offrons un canal de communication à travers notre web émission dans laquelle vous avez la possibilité de faire la lumière sur vous et votre activité en reportage, interview, publicité où un direct.
                     <br> Nous vous invitons a visualisé nos quelques réalisations !!
             </p>
            </div>
@@ -52,6 +52,13 @@
                         <form action="https://wa.me/+22996395247">
                             <button type="submit" class="btn btn-success">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                    <div style="margin-top:5px;"></div>
+                    <form action="https://www.facebook.com/monentrepriseenbef?mibextid=ZbWKwL">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fab fa-facebook"></i> Nos réalisations
                             </button>
                         </form>
                     </div>
