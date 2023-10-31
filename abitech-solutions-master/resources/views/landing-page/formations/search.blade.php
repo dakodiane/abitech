@@ -167,22 +167,24 @@
             <li class="list-group-item">toute autre formation spéciale ...</li>
         </ul>
 
-        <br><p style="margin-left: 50px">Envie de vous faire former ?</p>
-        <form action="traitement.php" method="post" class="well col-lg-offset-3 col-lg-6" style="margin-left: 15px">
+        <br>
+        <form action="traitement.php" method="post" class="well col-lg-offset-3 col-lg-6" style="margin-left: 10px">
+            <fieldset><legend>Envie de vous faire former ?</legend>
                 <div class="form-group id">
                     <label for="identifiant">Votre mail</label><br>  
                     <input type="text" name="identifiant" id="identifiant" class="form-control"><br>
                 </div>
-                <div class="form-group id">
+                 <div class="form-group id">
                     <label for="mdp">Dites-nous comment vous aider </label><br>  
-                    <textarea name="mdp" id="txt" class="form-control">
+                    <textarea name="mdp" id="txt" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
                 </div><br>
-                <div class="form-group buttons">
+                 <div class="form-group buttons">
                     <input type="submit" class="btn btn-success" value="Envoyer">
                 </div>
-        </form>
+            </fieldset>      
+        </form> 
     </section> 
 
     <!-- About End -->
