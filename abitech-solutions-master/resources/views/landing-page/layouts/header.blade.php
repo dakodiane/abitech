@@ -12,8 +12,10 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="{{route('welcome')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'welcome') active @endif">Accueil</a>
                     <a href="{{route('formation')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'formation') active @endif">Formations</a>
+                    <a href="{{route('actualite')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'actualite') active @endif">Actualités</a>
                     <a href="{{route('video')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'video') active @endif">Videos</a>
                     <a href="{{route('contact')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'contact') active @endif">Contact</a>
+                    
                 </div>
             </div>
         </div>

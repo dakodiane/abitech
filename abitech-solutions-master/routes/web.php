@@ -30,6 +30,9 @@ Route::get('/', [LandingController::class, 'index'])->name('welcome');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/send-contact', [LandingController::class, 'contact'])->name('send.contact.mail');
 Route::get('/formation', [FormationController::class, 'search'])->name('formation');
+Route::get('/actualite', function () {return view('landing-page/actualite/view');})->name('actualite');
+Route::get('/detail', function () {return view('landing-page/actualite/detail');})->name('detail');
+
 Route::get('/video', [ShowVideoController::class, 'search'])->name('video');
 Route::get('/formation/{id}/view', [FormationController::class, 'view'])->name('view-formation');
 

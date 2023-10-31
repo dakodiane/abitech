@@ -1,60 +1,16 @@
-<div style="height: 80px;"></div>
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-
-  <div class="carousel-inner" >
-  <div class="carousel-item active" style="background: url('{{ asset('img/programme1.jpeg') }}') center center / cover no-repeat; height: 75vh;">
-    <div class="mask flex-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7 col-12 order-md-1 order-2" style="padding-top: 30vh;">
-                    <h4>Abitech Solution à 10.000 Codeurs</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#">Lire l'article</a>
-                </div>
+<div class="hero-header">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="text-black mb-4 animated zoomIn">Découvrez la solution à votre portée </h1>
+                <p class="text-black pb-3 animated zoomIn lh-lg" style="color: black;font-size: 16px;">Explorez de nouvelles opportunités grâce à nos formations digitales de qualité. Acquérez les compétences essentielles pour réussir dans le monde numérique d'aujourd'hui. Nos formateurs expérimentés vous accompagnent pas à pas pour vous permettre d'atteindre vos objectifs professionnels. Rejoignez notre communauté engagée et faites le premier pas vers votre transformation digitale</p>
+                <a href="{{ route('actualite') }}" class="btn btn-danger rounded-pill border-2 py-3 px-5 animated slideInRight">ACTUALITES</a>
             </div>
+            <div class="col-lg-6 text-center text-lg-start">
+    <img class="img-fluid animated zoomIn custom-border" src="{{ asset('img/DSC_0421.JPG') }}" alt="">
+</div>
+
         </div>
     </div>
 </div>
- <div class="carousel-item" style="background: url('{{ asset('img/programme2.jpeg') }}') center center / cover no-repeat; height: 75vh;">
-          <div class="mask flex-center">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-7 col-12 order-md-1 order-2 " style="padding-top: 30vh;">
-              <h4>Abitech Solution à 10.000 Codeurs</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#">Lire l'article</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item"  style="background: url('{{ asset('img/programme3.jpeg') }}') center center/ cover no-repeat; height: 75vh;">
-      <div class="mask flex-center">
-        <div class="container">
-          <div class= "row align-items-center">
-            <div class="col-md-7 col-12 order-md-1 order-2" style="padding-top: 30vh;">
-              <h4>Abitech Solution à 10.000 Codeurs</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <a href="#">Lire l'article</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Précédent</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Suivant</span>
-  </a>
-</div>
-
-<script>
-    $('#myCarousel').carousel({
-        interval: 2000,
-    });
-</script>

@@ -223,7 +223,17 @@ body {
 .hero-header {
     margin-bottom: 6rem;
     padding: 12rem 0 9rem 0;
-    /*background: url(../img/shape-bottom.png) center bottom no-repeat;*/
+   background: url(../img/back2.jpg) ;
+   background-color: rgba(255, 255, 255, 0.7);
+   background-blend-mode: overlay;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.custom-border {
+    border: 5px solid #ff0000; /* Couleur de la bordure (rouge dans cet exemple) */
+    border-radius: 10px; /* Rayon des coins de la bordure (ajustez selon votre préférence) */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre autour de l'image (facultatif) */
 }
 
 .page-header {
