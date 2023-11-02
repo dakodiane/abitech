@@ -16,26 +16,36 @@
     </div>
 </div>
 
+<style>
+    .custom-card-image {
+    width: 600px; /* Largeur souhaitée */
+    height: 300px; /* Hauteur souhaitée */
+    object-fit: cover; /* Pour conserver les proportions de l'image */
+}
 
-
+</style>
 
 
 <div class="container-fluid">
     <div class="row">
-    <div class="col-sm-6 nopadding-lr dark-wrapper opaqued background-cover" style="background-image: url('{{ asset('img/programme1.jpeg') }}'); background-size: 100% 100%;">
-            <div class="dark-opaqued-half section-inner pad-sides-60 match-height" data-mh="promo-inner">
-                <h3 class="mb50">Evènement <span class="theme-accent-color">10.000 Codeurs</span></h3>
-                <p class="lead mb50">
-                  <b>Nous avons participé au forum 10.000 codeur ou il était question d’entretenir les jeunes sur les question de l’entrepreneuriat et du numérique.10.000 codeurs est...</p>
-
-                <div class="spacer-180"></div>
-                <p class="mt30"><a href="{{ route('detail') }}" class="btn btn-primary btn-red page-scroll">Lire l'article</a></p>
+        @foreach($actualites as $actualite)
+        <div class="col-sm-6">
+            <div class="card mb-4">
+                <img src="{{ asset('storage/' . $actualite->photo1) }}" class="card-img-top custom-card-image" alt="{{ $actualite->nom }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ $actualite->nom }}</h5>
+                    <p class="card-text">{{ $actualite->shortDescription }}...</p>
+                    <a href="{{ route('detail', ['id' => $actualite->id]) }}" class="btn btn-primary">Lire l'article</a>
+                </div>
             </div>
         </div>
-
-
+        @endforeach
     </div>
 </div>
+
+
+
+
 
 <style>
     @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);

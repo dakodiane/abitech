@@ -24,7 +24,7 @@ class SessionsController extends Controller
         ]);
         if(Auth::attempt($attributes))
         {
-            session()->regenerate();
+         
             return redirect(route('dashboard'))->with(['success'=>'Connexion réussie.']);
         }
         else{

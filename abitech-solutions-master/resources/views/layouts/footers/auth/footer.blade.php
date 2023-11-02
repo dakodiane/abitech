@@ -5,8 +5,8 @@
                 <div class="copyright text-center text-sm text-muted text-lg-start">
                     © <script>
                         document.write(new Date().getFullYear())
-                    </script>, made with <i class="fa fa-heart"></i> by
-                    KPANOU Gilles
+                    </script>Abitech <i class="fa fa-heart"> Solution</i>
+                   
                 </div>
             </div>
         </div>

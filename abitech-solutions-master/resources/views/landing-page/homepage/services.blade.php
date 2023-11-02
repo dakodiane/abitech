@@ -54,7 +54,7 @@
 
             <div class="col-md-6 col-lg-4 mb-5 wow fadeInUp" data-wow-delay="0.2s">
               <div class="card mx-auto h-100 service-item align-items-center justify-content-center" >
-                   <img class="img-fluid" src="{{asset(asset('img/Communication.jpeg'))}}" alt=" photo de communication digital" style="height: 220px;">
+                   <img class="img-fluid" src="{{asset('img/communication.jpeg')}}" alt=" photo de communication digital" style="height: 220px;">
                   <div class="card-body ">
                     <h5 class="card-title text-center">Communication digitale</h5>
                     <div class="text-center ">

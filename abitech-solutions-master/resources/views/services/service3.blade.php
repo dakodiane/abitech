@@ -19,7 +19,7 @@
      <div class="card mb-3" >
        <div class="row g-0">
          <div class="col-md-6">
-         <img class="img-fluid" src="{{asset(asset('img/Com.jpg'))}}" alt=" photo de communication digital" >
+         <img class="img-fluid" src="{{asset('img/com.JPG')}}" alt=" photo de communication digital" >
 
         </div>
          <div class="col-md-6">

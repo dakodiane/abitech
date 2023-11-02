@@ -10,15 +10,14 @@ class Contact extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $table = 'contacts';
-
-    protected $fillable = [
+ protected $table = 'contacts';
+    protected $fillable =[
+        'id',
         'name',
         'email',
         'object',
         'message',
         'created_at',
-        'updated_at',
+        'updated_at'
     ];
 }
-
