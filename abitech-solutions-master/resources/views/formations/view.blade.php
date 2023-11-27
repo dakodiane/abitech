@@ -48,8 +48,10 @@
                                             </div>
                                         @endforeach
                                     </div>
+                                    <br><a href="https://www.abitech-solution.tech/inscription" type="button" class="btn btn-primary">Inscrivez-vous</a>
                                 </div>
                             </div>
+                            <br><br><br><a href="{{route('details')}}" type="button" class="btn btn-primary">Toutes nos formations</a>
                         </div>
                     </div>
                 </div>

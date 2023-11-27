@@ -126,6 +126,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
     Route::post('formations/{id}/update', [FormationController::class, 'update'])->name('formations.update');
 
+    Route::get('formations/details', [FormationController::class, 'show'])->name('details');
+
+   
+
 
 
   //  show videos

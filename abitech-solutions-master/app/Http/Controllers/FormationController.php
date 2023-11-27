@@ -60,7 +60,7 @@ class FormationController extends Controller
      */
     public function show(Formation $formation)
     {
-        //
+        return view('formations.detailsformations');
     }
 
     /**
