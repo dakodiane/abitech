@@ -25,35 +25,35 @@
 				@if($actualite->photo1)
 				<div class="row widget">
 					<div class="col-xs-12">
-						<p><img src="{{ asset('storage/' . $actualite->photo1) }}" alt="" class="custom-card-image"></p>
+						<p><img src="{{ asset($actualite->photo1) }}" alt="" class="custom-card-image"></p>
 					</div>
 				</div>
 				@endif
 				@if($actualite->photo2)
 				<div class="row widget">
 					<div class="col-xs-12">
-						<p><img src="{{ asset('storage/' . $actualite->photo2) }}" alt="" class="custom-card-image"></p>
+						<p><img src="{{ asset($actualite->photo2) }}" alt="" class="custom-card-image"></p>
 					</div>
 				</div>
 				@endif
 				@if($actualite->photo3)
 				<div class="row widget">
 					<div class="col-xs-12">
-						<p><img src="{{ asset('storage/' . $actualite->photo3) }}" alt="" class="custom-card-image"></p>
+						<p><img src="{{ asset($actualite->photo3) }}" alt="" class="custom-card-image"></p>
 					</div>
 				</div>
 				@endif
 				@if($actualite->photo4)
 				<div class="row widget">
 					<div class="col-xs-12">
-						<p><img src="{{ asset('storage/' . $actualite->photo4) }}" alt="" class="custom-card-image"></p>
+						<p><img src="{{ asset($actualite->photo4) }}" alt="" class="custom-card-image"></p>
 					</div>
 				</div>
 				@endif
 				@if($actualite->photo4)
 				<div class="row widget">
 					<div class="col-xs-12">
-						<p><img src="{{ asset('storage/' . $actualite->photo5) }}" alt="" class="custom-card-image"></p>
+						<p><img src="{{ asset($actualite->photo5) }}" alt="" class="custom-card-image"></p>
 					</div>
 				</div>
 				@endif

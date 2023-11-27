@@ -86,7 +86,7 @@
                                         </td>
                                         <td class="align-middle">
                                             @if($actualite->photo1)
-                                            <a href="{{ asset('storage/' . $actualite->photo1) }}" target="_blank">
+                                            <a href="{{ asset( $actualite->photo1) }}" target="_blank">
                                                 <span class="badge @if($actualite->active) bg-gradient-success @else bg-gradient-danger @endif">
                                                     Voir la photo 1
                                                 </span>
@@ -96,7 +96,7 @@
 
                                         <td class="align-middle">
                                             @if($actualite->photo2)
-                                            <a href="{{ asset('storage/' . $actualite->photo2) }}" target="_blank">
+                                            <a href="{{ asset( $actualite->photo2) }}" target="_blank">
                                                 <span class="badge @if($actualite->active) bg-gradient-success @else bg-gradient-danger @endif">
                                                     Voir la photo 2
                                                 </span>
@@ -106,7 +106,7 @@
 
                                         <td class="align-middle">
                                             @if($actualite->photo3)
-                                            <a href="{{ asset('storage/' .$actualite->photo3) }}" target="_blank">
+                                            <a href="{{ asset($actualite->photo3) }}" target="_blank">
                                                 <span class="badge @if($actualite->active) bg-gradient-success @else bg-gradient-danger @endif">
                                                     Voir la photo 3
                                                 </span>
@@ -115,7 +115,7 @@
                                         </td>
                                         <td class="align-middle">
                                             @if($actualite->photo4)
-                                            <a href="{{ asset('storage/' .$actualite->photo4) }}" target="_blank">
+                                            <a href="{{ asset($actualite->photo4) }}" target="_blank">
                                                 <span class="badge @if($actualite->active) bg-gradient-success @else bg-gradient-danger @endif">
                                                     Voir la photo 4
                                                 </span>
@@ -124,7 +124,7 @@
                                         </td>
                                         <td class="align-middle">
                                             @if($actualite->photo5)
-                                            <a href="{{ asset('storage/' .$actualite->photo5) }}" target="_blank">
+                                            <a href="{{ asset($actualite->photo5) }}" target="_blank">
                                                 <span class="badge @if($actualite->active) bg-gradient-success @else bg-gradient-danger @endif">
                                                     Voir la photo 5
                                                 </span>

@@ -30,23 +30,23 @@
                                     {{$actualite->description}}
                                 </div>
                                 @if($actualite->photo1)
-                                        <img src="{{asset('storage/' .$actualite->photo1)}}" style="width: 250px;height:250px;" />
+                                        <img src="{{asset($actualite->photo1)}}" style="width: 250px;height:250px;" />
                                   
                                 @endif
                                 @if($actualite->photo2)
-                                        <img src="{{asset('storage/' .$actualite->photo2)}}" style="width: 250px;height:250px;" />
+                                        <img src="{{asset($actualite->photo2)}}" style="width: 250px;height:250px;" />
                                   
                                 @endif
                                 @if($actualite->photo3)
-                                        <img src="{{asset('storage/' .$actualite->photo3)}}" style="width: 250px;height:250px;" />
+                                        <img src="{{asset($actualite->photo3)}}" style="width: 250px;height:250px;" />
                                   
                                 @endif
                                 @if($actualite->photo4)
-                                        <img src="{{asset('storage/' .$actualite->photo4)}}" style="width: 250px;height:250px;" />
+                                        <img src="{{asset($actualite->photo4)}}" style="width: 250px;height:250px;" />
                                   
                                 @endif
                                 @if($actualite->photo5)
-                                        <img src="{{asset('storage/' .$actualite->photo5)}}" style="width: 250px;height:250px;" />
+                                        <img src="{{asset($actualite->photo5)}}" style="width: 250px;height:250px;" />
                                   
                                 @endif
                               

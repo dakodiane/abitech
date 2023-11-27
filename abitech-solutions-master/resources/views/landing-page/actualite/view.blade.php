@@ -31,7 +31,7 @@
         @foreach($actualites as $actualite)
         <div class="col-sm-6">
             <div class="card mb-4">
-                <img src="{{ asset('storage/' . $actualite->photo1) }}" class="card-img-top custom-card-image" alt="{{ $actualite->nom }}">
+                <img src="{{ asset($actualite->photo1) }}" class="card-img-top custom-card-image" alt="{{ $actualite->nom }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ $actualite->nom }}</h5>
                     <p class="card-text">{{ $actualite->shortDescription }}...</p>
