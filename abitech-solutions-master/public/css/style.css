@@ -223,7 +223,17 @@ body {
 .hero-header {
     margin-bottom: 6rem;
     padding: 12rem 0 9rem 0;
-    /*background: url(../img/shape-bottom.png) center bottom no-repeat;*/
+   background: url(../img/back2.jpg) ;
+   background-color: rgba(255, 255, 255, 0.0);
+   background-blend-mode: overlay;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.custom-border {
+    border: 5px solid #ff0000; /* Couleur de la bordure (rouge dans cet exemple) */
+    border-radius: 10px; /* Rayon des coins de la bordure (ajustez selon votre préférence) */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Ombre autour de l'image (facultatif) */
 }
 
 .page-header {
@@ -564,8 +574,8 @@ body {
     background-attachment: fixed;
 }
 #myCarousel h4{
-	font-size:50px;
-	margin-bottom:15px;
+	font-size:40px;
+	margin-top:5px;
 	color:#FFF;
 	line-height:100%;
 	letter-spacing:0.5px;
@@ -573,11 +583,11 @@ body {
 }
 #myCarousel p{
 	font-size:18px;
-	margin-bottom:15px;
+	margin-top:5px;
 	color:#d5d5d5;
 }
 #myCarousel .carousel-item a{background:red; font-size:14px; color:#FFF; padding:13px 32px; display:inline-block; }
-#myCarousel .carousel-item a:hover{background:#394fa2; text-decoration:none;  }
+#myCarousel .carousel-item a:hover{background:rgba(255, 0, 0, 0.575); text-decoration:none;  }
 
 #myCarousel .carousel-item h4{-webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;} 
 #myCarousel .carousel-item p{-webkit-animation-name:slideInRight; animation-name:slideInRight;} 
@@ -588,9 +598,15 @@ body {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-#myCarousel .container {max-width: 1430px;  }
+#myCarousel .container {max-width: 1430px; }
 #myCarousel .carousel-item{height:100%; min-height:550px; }
-#myCarousel{position:relative; z-index:1; background:url(https://i.imgur.com/6axE29k.jpg) center center no-repeat; background-size:cover; }
+#myCarousel {
+    position: relative;
+    z-index: 1;
+  
+    background-size: cover;
+  }
+  
 
 .carousel-control-next, .carousel-control-prev{height:40px; width:40px; padding:12px; top:50%; bottom:auto; transform:translateY(-50%); background-color: red; }
 
@@ -896,4 +912,22 @@ h2{
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.background-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.background-slider:hover img {
+    transform: translateX(-100%);
 }

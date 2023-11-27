@@ -21,4 +21,13 @@ class ShowVideo extends Model
         'created_at',
         'updated_at'
     ];
+
+    public static function uploadShowVideoFile($videoId, $file)
+{
+    // Logique de téléchargement de la vidéo et obtention du chemin
+    $path = $file->store('videos', 'public');
+
+    return $path;
+}
+
 }

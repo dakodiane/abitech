@@ -48,18 +48,22 @@ class ShowVideoController extends Controller
     }
 
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
+
     public function store(StoreShowVideoRequest $request): RedirectResponse
     {
-
         $video = new ShowVideo();
-        $video['id'] = Str::uuid();
+        $video->id = Str::uuid();
         $video->fill($request->except('id', 'video'));
-        if($request->file('video') !== null)
-            $video['video'] = self::uploadShowVideoFile($video['id'], $request->file('video'));
+    
+        if ($request->file('video')) {
+            $videoFile = $request->file('video');
+            $videoPath = $videoFile->store('videos','public');
+            $video->video = $videoPath;
+        }
+    
         $video->save();
+    
         connectify('success', 'Video', 'Vidéo ajoutée avec succès');
         return back()->with('success', 'Video created successfully.');
     }

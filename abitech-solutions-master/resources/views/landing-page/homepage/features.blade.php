@@ -28,7 +28,7 @@
                             <div class="flex-shrink-0 btn-square bg-danger rounded-circle me-3">
                                 <i class="fa fa-headset text-white"></i>
                             </div>
-                            <h6 class="mb-0">24/7 Assisatance et intervention</h6>
+                            <h6 class="mb-0">24/7 Assistance et intervention</h6>
                         </div>
                     </div>
                 </div>
