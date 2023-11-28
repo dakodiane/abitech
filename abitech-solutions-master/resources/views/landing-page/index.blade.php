@@ -1,7 +1,9 @@
 @extends('landing-page.layouts.template')
 
 @section('content')
-
+<!-- Actualite Start 
+@include('landing-page.homepage.actu')
+ Banner End -->
     <!-- Banner Start -->
     @include('landing-page.homepage.banner')
     <!-- Banner End -->

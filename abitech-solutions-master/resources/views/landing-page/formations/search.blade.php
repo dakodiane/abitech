@@ -81,9 +81,11 @@
             </div>
         @endif
     </div>
-    <div class="row">
-        <a href="{{ route('details') }}" class="btn btn-success">Toutes nos formations</a>
-    </div>
+        <div class="container" style="text-align: center;">
+            <div class="col-md-6 col-md-offset-3">
+                <a href="{{ route('details') }}" class="btn btn-success">Toutes nos formations</a>
+            </div>
+        </div>
 
     <!-- About End -->
 @endsection
