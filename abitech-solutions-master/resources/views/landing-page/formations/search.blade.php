@@ -1,162 +1,130 @@
 @extends('landing-page.layouts.template')
 
 @section('content')
-    <section class="flat-row section-iconbox" style="background-color: white;">
-
-        <br><br><br><br><br>
-
-        <div class="container" style="background-color: rgba(210,210,210);">
-
-            <div class="row">
-
-                <div class="col-lg-5">
-
-                    <div class="title-section style3 left d-flex justify-content-center" >
-
-                        <h1 class="title" style="color: Navy;">Nos Formations</h1><br><br>
-
+    <div class="bg-light hero-header" style="padding-bottom: 30px !important; margin-bottom: 30px">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <form class="col-lg-12 col-md-12 text-start text-lg-start" method="get" action="{{route('formation')}}">
+                    <div class="form form-group ">
+                        <label for="search" style="font-size: 26px"
+                               class="font-weight-bolder mb-4 animated zoomIn">Recherchez votre
+                            formation</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control border-0 rounded-0 p-3" placeholder="Recherchez ici"
+                                   aria-describedby="basic-addon2" name="search" value="{{request()->query('search')}}">
+                            <div class="input-group-append rounded-0">
+                                <button class="input-group-text p-3 btn bg-white rounded-0" type="submit"
+                                        id="basic-addon2">
+                                    <i class="fa fa-search"> </i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
+                </form>
             </div>
-
-            <div class="row">
-
-                <div class="col-lg-4">
-
-                     <div class="iconbox style3">
-
-                        <div class="box-header">
-
-                            <div class="box-icon">
-
-                                <i class="ti-pie-chart"></i>
-
-                            </div>
-
-                        </div>
-
-                        <div class="box-content" style="height: 220px;">
-
-                            <br><h5  class="box-title">Formation en duo</h5>  
-
-                            <p>
-                                <li style="color: navy">Tous types de formations informatiques</li>
-                                <li style="color: navy">Durée: varie selon la formation</li>
-                                <li style="color: navy">Coût: varie selon la durée et la formation</li> 
-                            </p> 
-
-                        </div>
-
-                    </div>     
-
+        </div>
+    </div>
+    <div class="container">
+        <h3> Resultat(s): {{$formations->total()}}</h3>
+        <form class="horizontal-scroll">
+            <div class="d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    Filtrer par categorie:
                 </div>
-
-                <div class="col-lg-4">
-
-                     <div class="iconbox style3">
-
-                        <div class="box-header">
-
-                            <div class="box-icon">
-
-                                <i class="ti-bar-chart"></i>
-
+                <div class="formation-categories flex-grow-1">
+                    @foreach($categories as $category)
+                        <a id="{{$category->id}}" class="me-2 p-3 btn formation-category @if(in_array($category->id, request()->query('categories') ?? [])) active @endif"
+                           href="{{
+                            route('formation', [
+                            'search'=>request()->query('search'),
+                            'categories'=> (request()->query('$categories') ?? [$category->id])
+                            ]
+                            )}}"
+                        >
+                            {{$category->name}}
+                        </a>
+                        @endforeach
+                    </div>
+                    @if(request()->query('search') || request()->query('categories'))
+                        <a class="btn"  href="{{route('formation')}}" type="button"  data-toggle="tooltip" data-placement="top" title="Effacer le filtre">
+                            <i class="fa fa-times text-danger"  style="font-size: 25px"></i>
+                        </a>
+                    @endif
+                </div>
+            </form>
+            @if(count($formations) == 0)
+                <div class="formation-empty d-flex align-items-center justify-content-center">
+                    Aucune formation disponible
+                </div>
+            @else
+                <div class="formations-results mt-4">
+                    @foreach($formations as $formation)
+                        <a class="formation d-flex align-items-center shadow p-4 my-3"
+                           href="{{route('view-formation', ['id'=>$formation->id])}}">
+                            <div class="formation-content flex-grow-1  d-flex align-items-center justify-content-start">
+                                @if($formation->image)
+                                    <img class="formation-image rounded-1" src="{{asset($formation->image)}}" alt="" width="50" height="50">
+                                @endif
+                                <div>
+                                    <div class="formation-title font-weight-bolder">{{$formation->name}}</div>
+                                    <div class="formation-description text-muted">{{$formation->description}}</div>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div class="box-content" style="height: 220px;">
-
-                            <h5  class="box-title">Formation à distance</h5>  
-
-                            <p>
-                                <li style="color: navy">Tous types de formations informatiques</li>
-                                <li style="color: navy">Durée: varie selon la formation</li>
-                                <li style="color: navy">Coût: varie selon la durée et la formation</li> 
-                            </p>
-
-                        </div>
-
-                    </div>     
-
-                </div> 
-
-                <div class="col-lg-4">
-
-                     <div class="iconbox style3">
-
-                        <div class="box-header">
-
-                            <div class="box-icon">
-
-                                <i class="ti-bell"></i>
-
+                            <div class="formation-follow">
+                                <i class="fa fa-arrow-right"></i>
                             </div>
-
-                        </div>
-
-                        <div class="box-content" style="height: 220px;">
-
-                            <h5  class="box-title">Formation en continue</h5>  
-
-                            <p>
-                                <li style="color: navy">Tous types de formations informatiques</li>
-                                <li style="color: navy">Durée: varie selon la formation</li>
-                                <li style="color: navy">Coût: varie selon la durée et la formation</li> 
-                            </p>
-
-                        </div>
-
-                    </div>     
-
-                </div> 
-
-                
-
-                        <div class="box-content" style="height: 220px;overflow: auto;">
-
-                            <h5  class="box-title">Formation d'entreprise</h5>  
-
-                            <p>
-                                <li style="color: navy">Tous types de formations informatiques</li>
-                                <li style="color: navy">Durée: varie selon la formation</li>
-                                <li style="color: navy">Coût: varie selon la durée et la formation</li> 
-                            </p>
-                        </div>
-
-                    </div>     
-
-                </div>        
-
-            </div>  
-
+                        </a>
+                    @endforeach
+                    @include('components/pagination', ['paginator'=>$formations])
+                </div>
+            @endif
         </div>
 
-    </section>
-    <br><br><p class="text-xxl-end"><strong>ABITECH SOLUTION </strong> est une entreprise informatique qui offre des formations selon les besoins des individus et des entreprises.</p>
-    <br><h3>Nos domaines d'intervention</h3>
-    <br><ul class="list-group">
-        <li class="list-group-item">Formation à niveau avec les Logiciels MICROSOFT Excel, Powerpoint, Access, Power BI</li>
-        <li class="list-group-item">Formation complète à Linux et ses distributions</li>
-        <li class="list-group-item">Apprentissage et maîtrise des Logiciels de gestion pour entreprises et service de Comptabilité</li>
-        <li class="list-group-item">Renforcement de capacité en Programmation informatique, Réseaux et Télécommunications</li>
-        <li class="list-group-item">Formation complète en administration et gestion de bases de données</li>
-        <li class="list-group-item">Formation en photoshop et montage vidéo</li>
-        <li class="list-group-item">Formation complète en architechture</li>
-        <li class="list-group-item">Toute autre formation, spécifique et spécialisée selon vos besoins.</li> 
-    </ul>
+        <div class="row">
+             @endforeach
+                </div>
+                @if(request()->query('search') || request()->query('categories'))
+                    <a class="btn"  href="{{route('formation')}}" type="button"  data-toggle="tooltip" data-placement="top" title="Effacer le filtre">
+                        <i class="fa fa-times text-danger"  style="font-size: 25px"></i>
+                    </a>
+                @endif
+            </div>
+        </form>
+        @if(count($formations) == 0)
+            <div class="formation-empty d-flex align-items-center justify-content-center">
+                Aucune formation disponible
+            </div>
+        @else
+            <div class="formations-results mt-4">
+                @foreach($formations as $formation)
+                    <a class="formation d-flex align-items-center shadow p-4 my-3"
+                       href="{{route('view-formation', ['id'=>$formation->id])}}">
+                        <div class="formation-content flex-grow-1  d-flex align-items-center justify-content-start">
+                            @if($formation->image)
+                                <img class="formation-image rounded-1" src="{{asset($formation->image)}}" alt="" width="50" height="50">
+                            @endif
+                            <div>
+                                <div class="formation-title font-weight-bolder">{{$formation->name}}</div>
+                                <div class="formation-description text-muted">{{$formation->description}}</div>
+                                <br><div class="formation-inscription"><a href="https://www.abitech-solution.tech/inscription" type="button" class="btn btn-primary">Inscrivez-vous</a></div>
+                            </div>
+                        </div>
+                        <div class="formation-follow">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                @endforeach
+                @include('components/pagination', ['paginator'=>$formations])
+            </div>
+        @endif
+    </div>
+    <div class="row">
+        <br><br><br><a href="{{route('details')}}" type="button" class="btn btn-primary">Toutes nos formations</a>
+    </div>
 
-    <br><p>Envie d'une formation ?</p>
-    <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Votre adresse email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Choisissez une formation ou laissez-nous un message</label>
-            <textarea class="form-control" name="texte" placeholder="comment pouvons-nous vous aider ?" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <br><button type="button" name="envoyer" class="btn btn-success">Envoyer</button>
-        </div>
     <!-- About End -->
 @endsection
+
+        
+    
+      

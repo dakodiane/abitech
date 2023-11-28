@@ -59,7 +59,7 @@ class FormationController extends Controller
      */
     public function show(Formation $formation)
     {
-        return view('formations.detailsformations');
+        return view('landing-page.formations.formations');
     }
 
     /**
