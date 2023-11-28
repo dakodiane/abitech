@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreContactRequest;
+use App\Models\Actualite;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Formation;
@@ -19,11 +20,9 @@ class LandingController extends Controller
     //
     public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('landing-page/index');
+        $news = Actualite::latest()->get();
+        return view('landing-page/index', compact('news'));
     }
-
-
-
     public function contact(StoreContactRequest $request): RedirectResponse
     {
         Contact::query()->create([

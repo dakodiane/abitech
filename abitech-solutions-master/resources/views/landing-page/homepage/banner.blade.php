@@ -10,7 +10,6 @@
             <div class="col-lg-6 text-center text-lg-start">
     <img class="img-fluid animated zoomIn " src="{{ asset('img/DSC_0421.JPG') }}" alt="">
 </div>
-
         </div>
     </div>
 </div>
