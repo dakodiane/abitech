@@ -42,13 +42,14 @@ Route::get('/formation/{id}/view', [FormationController::class, 'view'])->name('
    // Route::post('categories/{id}/update', [CategoryController::class, 'update'])->name('categories.update');
 
     //formations
-  //  Route::get('formations/list', [FormationController::class, 'index'])->name('formations');
-    //Route::get('formations/{id}/view', [FormationController::class, 'details'])->name('formations.details');
-    //Route::post('formations/create', [FormationController::class, 'store'])->name('formations.create');
-    //Route::get('formations/create', [FormationController::class, 'create'])->name('formation.create.view');
-    //Route::get('formations/{id}/edit', [FormationController::class, 'edit'])->name('formations.edit');
-    //Route::post('formations/{id}/activate', [FormationController::class, 'toggleStatus'])->name('formations.toggle');
-    //Route::post('formations/{id}/update', [FormationController::class, 'update'])->name('formations.update');
+    Route::get('formations/list', [FormationController::class, 'index'])->name('formations');
+    Route::get('formations/{id}/view', [FormationController::class, 'details'])->name('formations.details');
+    Route::post('formations/create', [FormationController::class, 'store'])->name('formations.create');
+    Route::get('formations/create', [FormationController::class, 'create'])->name('formation.create.view');
+    Route::get('formations/{id}/edit', [FormationController::class, 'edit'])->name('formations.edit');
+    Route::post('formations/{id}/activate', [FormationController::class, 'toggleStatus'])->name('formations.toggle');
+    Route::post('formations/{id}/update', [FormationController::class, 'update'])->name('formations.update');
+    Route::get('formation/details', [FormationController::class, 'show'])->name('details');
 
     //show videos
     //Route::get('videos/list', [ShowVideoController::class, 'list'])->name('videos');
