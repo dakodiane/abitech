@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="mb-4">Pourquoi les gens nous choisissent-ils ? Nous sommes une agence de confiance et de qualité</h2>
+                <h2 class="mb-4">Pourquoi les gens nous choisissent-ils ? Nous sommes une entreprise de confiance et de qualité</h2>
             </div>
             <div class="col-lg-7">
                 <div class="row g-5">

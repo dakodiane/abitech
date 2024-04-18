@@ -15,8 +15,7 @@
         <!-- Spinner Start -->
         @include('landing-page.layouts.spinner')
         <!-- Spinner End -->
-
-
+        
         <!-- Navbar & Hero Start -->
         <header>
             @include('landing-page.layouts.header')

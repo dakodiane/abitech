@@ -31,21 +31,20 @@
                 Aucune video disponible
             </div>
         @else
-            <div class="video-results mt-4 row">
-                @foreach($videos as $video)
-                 <div class="video col-md-3 mb-2 " style="max-height: 250px; height: 250px">
-                     <video class="modal-content " id="video{{$video->id}}" controls height="200" style="max-height: 200px; height: 200px"  onfocusout="this.pause();">
-                         <source src="{{asset($video->video)}}" type="video/{{\Str::afterLast($video->video, '.')}}" />
-                         Your browser does not support the video tag.
-                     </video>
-                     <div class="footer w-100 p-2 cursor-pointer" >
-                         <div style="font-weight: bolder" >{{$video->name}}</div>
-                         <div class="formation-description">{{$video->description}}</div>
-                     </div>
-                 </div>
-                @endforeach
-                @include('components/pagination', ['paginator'=>$videos])
+        <div class="video-results mt-4 row">
+        @foreach($videos as $video)
+        <div class="video col-md-3" style="max-height: 250px; height: 250px;margin-left:40px;margin-bottom:80px">
+            <div>
+                <iframe style="max-height: 200px; height: 200px" height="200" src="https://www.youtube.com/embed/{{$video->youtube_url}}" frameborder="0" allowfullscreen></iframe>
             </div>
+            <div class="footer w-100 p-2 cursor-pointer">
+                <div style="font-weight: bolder">{{$video->name}}</div>
+                <div class="formation-description">{{$video->description}}</div>
+            </div>
+        </div>
+        @endforeach
+        @include('components/pagination', ['paginator'=>$videos])
+    </div>
         @endif
     </div>
 

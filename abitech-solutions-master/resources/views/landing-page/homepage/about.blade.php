@@ -15,6 +15,7 @@
                     Nous élargissons nos prestations dans tous les domaines d’activité en priorisant le partenariat gagnant gagnant avec toute entreprise désirant de collaborer directement ou a travers nos différents projets. Nous sommes ouverts à toute proposition de n’importe quel domaine d’activité et acceptons toute collaboration externe.
                 </p>
             </div>
+            
         </div>
     </div>
 </div>

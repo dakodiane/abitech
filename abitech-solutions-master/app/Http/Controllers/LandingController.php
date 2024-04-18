@@ -20,9 +20,16 @@ class LandingController extends Controller
     //
     public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        $news = Actualite::latest()->get();
-        return view('landing-page/index', compact('news'));
+        $latestActualites = Actualite::latest()->take(3)->get();
+       
+        return view('landing-page/index', compact('latestActualites'));
     }
+    private function getShortDescription($description, $wordCount)
+{
+    $words = explode(' ', $description);
+    $shortDescription = implode(' ', array_slice($words, 0, $wordCount));
+    return $shortDescription;
+}
     public function contact(StoreContactRequest $request): RedirectResponse
     {
         Contact::query()->create([

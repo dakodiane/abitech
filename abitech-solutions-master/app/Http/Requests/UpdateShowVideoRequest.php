@@ -25,7 +25,7 @@ class UpdateShowVideoRequest extends FormRequest
             'id' => ['required', 'string', 'max:255', 'exists:show_videos,id'],
             'name' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
-            'video' => ['nullable', 'file', 'mimes:mp4,ogx,oga,ogv,ogg,webm'],
+            'youtube_url' => ['required', 'max:255'],
         ];
     }
 }

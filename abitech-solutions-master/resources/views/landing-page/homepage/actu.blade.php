@@ -1,27 +1,35 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    @foreach($news as $key => $article)
-                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <img src="{{ $article->photo1 }}" class="d-block w-100" alt="{{ $article->nom }}">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>{{ $article->nom }}</h5>
-                                <p>{{ $article->description }}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Précédent</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Suivant</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+   <!-- ======= Team Section ======= -->
+   <section id="team" class="team">
+
+       <div class="container" data-aos="fade-up">
+
+           <div class="row gy-4">
+               <div class="row">
+                   <div class="col-lg-12">
+                       <h2>ACTUALITES</h2>
+
+                   </div>
+        
+               </div>
+               @foreach ($latestActualites as $actualite)
+               <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+
+                   <div class="member">
+                       <div class="member-img">
+                           <img src="{{asset($actualite->photo1)}}" class="img-fluid" alt="">
+                       </div>
+                       <div class="member-info">
+                           <h4>{{$actualite->nom}}</h4>
+                           <p>{{ \Illuminate\Support\Str::limit($actualite->description, 70) }}...</p>
+                           <a href="{{ route('detail', ['id' => $actualite->id]) }}" class="btn btn-danger">Lire l'article</a>
+                       </div>
+                   </div>
+               </div>
+               @endforeach
+
+             
+           </div>
+
+       </div>
+
+   </section><!-- End Team Section -->

@@ -49,23 +49,37 @@ class ShowVideoController extends Controller
 
 
 
-
     public function store(StoreShowVideoRequest $request): RedirectResponse
     {
         $video = new ShowVideo();
         $video->id = Str::uuid();
         $video->fill($request->except('id', 'video'));
-    
+
+        // Récupérer l'ID de la vidéo YouTube en utilisant l'API YouTube Data v3
+        $youtubeVideoId = $this->getYoutubeVideoId($request->input('youtube_url'));
+
+        // Stocker l'ID de la vidéo YouTube dans la base de données
+        $video->youtube_url = $youtubeVideoId;
+
         if ($request->file('video')) {
             $videoFile = $request->file('video');
-            $videoPath = $videoFile->store('videos','public');
+            $videoPath = $videoFile->store('videos', 'public');
             $video->video = $videoPath;
         }
-    
+
         $video->save();
-    
         connectify('success', 'Video', 'Vidéo ajoutée avec succès');
         return back()->with('success', 'Video created successfully.');
+    }
+
+    private function getYoutubeVideoId($youtubeUrl)
+    {
+        // Extraire l'ID de la vidéo YouTube à partir de l'URL en utilisant l'API YouTube Data v3
+
+        // Obtenir la partie "v" de l'URL (ID de la vidéo)
+        parse_str(parse_url($youtubeUrl, PHP_URL_QUERY), $params);
+
+        return $params['v'] ?? null;
     }
 
     /**

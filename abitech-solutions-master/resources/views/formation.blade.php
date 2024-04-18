@@ -221,13 +221,12 @@
                                         <i class="material-icons">&#xE876;</i>
                                     </div>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
                                 </div>
                                 <div class="modal-body text-center">
                                     <h4>Super!</h4>
                                     <p>Vous venez de vous inscrire à la formation.</p>
                                     <p>Veuillez payer pour valider votre inscription!</p>
-                                    <script amount="1" callback="" data="" position="right" theme="red" sandbox="false" key="de9c4e671f1c676a8613e0a567252e182c8fc52c" src="https://cdn.kkiapay.me/k.js"></script>
+                                    <script amount="4996" callback="" data="" position="right" theme="red" sandbox="false" key="de9c4e671f1c676a8613e0a567252e182c8fc52c" src="https://cdn.kkiapay.me/k.js"></script>
                                     <button class="kkiapay-button btn btn-danger">Payer </button>
                                 </div>
                             </div>
@@ -238,16 +237,12 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
     <script>
         $(document).ready(function() {
-            // Interceptez la soumission du formulaire
             $('form').submit(function(event) {
-                event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+                event.preventDefault(); 
 
-                // Envoie du formulaire en utilisant AJAX
                 $.ajax({
                     url: $(this).attr('action'),
                     type: 'POST',

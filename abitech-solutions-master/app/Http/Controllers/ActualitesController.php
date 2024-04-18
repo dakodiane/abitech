@@ -204,7 +204,6 @@ class ActualitesController extends Controller
     {
 
         $actualite = Actualite::query()->findOrFail($id);
-
         return view('actualites/view', compact('actualite'));
 
     }

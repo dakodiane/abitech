@@ -220,16 +220,25 @@ body {
 
 
 /*** Hero Header ***/
+
 .hero-header {
     margin-bottom: 6rem;
     padding: 12rem 0 9rem 0;
-   background: url(../img/back2.jpg) ;
+   background: url(../img/BACKGROUND.png) ;
    background-color: rgba(255, 255, 255, 0.0);
    background-blend-mode: overlay;
    background-repeat: no-repeat;
    background-size: cover;
 }
-
+.hero-formation {
+    margin-bottom: 6rem;
+    padding: 12rem 0 9rem 0;
+   background: url(../img/Formation/6.jpg) ;
+   background-color: rgba(255, 255, 255, 0.0);
+   background-blend-mode: overlay;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 .custom-border {
     border: 5px solid #ff0000; /* Couleur de la bordure (rouge dans cet exemple) */
     border-radius: 10px; /* Rayon des coins de la bordure (ajustez selon votre préférence) */
@@ -255,6 +264,54 @@ body {
     color: rgba(256, 256, 256, .5);
 }
 
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 6px;
+    background: #252525;
+    transition: 0.3s;
+    position: relative;
+  }
+  
+  .services .icon-box:hover {
+    background: #2b2b2b;
+  }
+  
+  .services .icon-box i {
+    float: left;
+    color: #e03a3c;
+    font-size: 40px;
+    line-height: 0;
+  }
+  
+  .services .icon-box h4 {
+    margin-left: 70px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .services .icon-box h4 a {
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .services .icon-box h4 a:hover {
+    text-decoration: underline;
+  }
+  
+  .services .icon-box .icon-box:hover h4 a {
+    color: #e03a3c;
+  }
+  
+  .services .icon-box p {
+    margin-left: 70px;
+    line-height: 24px;
+    font-size: 14px;
+  }
 
 /*** Service ***/
 .service-item {
@@ -339,55 +396,63 @@ body {
 }
 
 
-/*** Team ***/
-.team-item {
-    position: relative;
-    padding: 30px;
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
     text-align: center;
-    transition: .5s;
-    z-index: 1;
-}
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    background: #fff;
+  }
+  
+  .team .member img {
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
 
-.team-item::before,
-.team-item::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 40%;
-    top: 0;
-    left: 0;
-    border-radius: 5px;
-    background: #FFFFFF;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-    transition: .5s;
-    z-index: -1;
-}
-
-.team-item::after {
-    top: auto;
-    bottom: 0;
-}
-
-.team-item:hover::before,
-.team-item:hover::after {
-    background: var(--primary);
-}
-
-.team-item h5,
-.team-item p {
-    transition: .5s;
-}
-
-.team-item:hover h5,
-.team-item:hover p {
-    color: #FFFFFF;
-}
-
-.team-item img {
-    padding: 15px;
-    border: 1px solid var(--primary);
-}
-
+  }
+  
+  .team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+  }
+  
+  .team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+  }
+  
+  .team .member p {
+    padding-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: #aaaaaa;
+  }
+  
+  .team .member .social {
+    margin-top: 15px;
+  }
+  
+  .team .member .social a {
+    color: #919191;
+    transition: 0.3s;
+  }
+  
+  .team .member .social a:hover {
+    color: #cc1616;
+  }
+  
+  .team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+  }
+  
+  
 
 /*** Footer ***/
 .footer .btn.btn-social {

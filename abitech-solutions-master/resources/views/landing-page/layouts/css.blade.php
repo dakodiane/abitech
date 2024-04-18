@@ -6,6 +6,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet"/>
+    <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">

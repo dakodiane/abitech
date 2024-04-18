@@ -30,10 +30,11 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="video" class="form-control-label">Selectionner la vidéo</label>
-                        <input type="file" accept="video/*" class="form-control @if($errors->has('video')) border-danger @endif" id="video" name="video" placeholder="Durée" >
-                        @if($errors->has('video'))
-                            <span class="text-danger">La durée de la catégorie est obligatoire</span>
+                        <label for="youtube_url" class="form-control-label">Lien de la vidéo</label>
+                        <textarea class="form-control @if($errors->has('youtube_url')) border-danger @endif"
+                                  id="youtube_url" name="youtube_url" placeholder="URL de la vidéo" required>@if($video) {{$video->youtube_url}} @endif</textarea>
+                        @if($errors->has('youtube_url'))
+                            <span class="text-danger">L'url  est obligatoire</span>
                         @endif
                     </div>
                     <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">

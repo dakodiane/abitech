@@ -1,30 +1,27 @@
 @extends('landing-page.layouts.template')
 
 @section('content')
-    <div class="bg-light hero-header" style="padding-bottom: 30px !important; margin-bottom: 30px">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <form class="col-lg-12 col-md-12 text-start text-lg-start" method="get" action="{{route('formation')}}">
-                    <div class="form form-group ">
-                        <label for="search" style="font-size: 26px"
-                               class="font-weight-bolder mb-4 animated zoomIn">Recherchez votre
-                            formation</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control border-0 rounded-0 p-3" placeholder="Recherchez ici"
-                                   aria-describedby="basic-addon2" name="search" value="{{request()->query('search')}}">
-                            <div class="input-group-append rounded-0">
-                                <button class="input-group-text p-3 btn bg-white rounded-0" type="submit"
-                                        id="basic-addon2">
-                                    <i class="fa fa-search"> </i>
-                                </button>
-                            </div>
+<div class="hero-formation img-fluid" style="padding-bottom: 160px !important; margin-bottom: 30px">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <form class="col-lg-12 col-md-12 text-start text-lg-start" method="get" action="{{route('formation')}}">
+                <div class="form form-group ">
+                    <label for="search" style="font-size: 26px;color:aliceblue" class="font-weight-bolder mb-4 animated zoomIn">Recherchez votre
+                        formation</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 rounded-0 p-3" placeholder="Recherchez ici" aria-describedby="basic-addon2" name="search" value="{{request()->query('search')}}">
+                        <div class="input-group-append rounded-0">
+                            <button class="input-group-text p-3 btn bg-white rounded-0" type="submit" id="basic-addon2">
+                                <i class="fa fa-search"> </i>
+                            </button>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="container">
+</div>
+<div class="container">
         <h3> Resultat(s): {{$formations->total()}}</h3>
         <form class="horizontal-scroll">
             <div class="d-flex align-items-center justify-content-start">
@@ -60,32 +57,35 @@
         @else
             <div class="formations-results mt-4">
                 @foreach($formations as $formation)
-                    <a class="formation d-flex align-items-center shadow p-4 my-3"
-                       href="{{route('view-formation', ['id'=>$formation->id])}}">
-                        <div class="formation-content flex-grow-1  d-flex align-items-center justify-content-start">
-                            @if($formation->image)
-                                <img class="formation-image rounded-1" src="{{asset($formation->image)}}" alt="" width="50" height="50">
-                            @endif
-                            <div>
-                                <div class="formation-title font-weight-bolder">{{$formation->name}}</div>
-                                <div class="formation-description text-muted">{{$formation->description}}</div>
-                                <div class="formation-description text-muted"><a href="https://www.abitech-solution.tech/inscription">Inscription</a></div>
-                            </div>
-                        </div>
-                        <div class="formation-follow">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
+                <a class="formation d-flex align-items-center shadow p-4 my-3" href="{{route('view-formation', ['id'=>$formation->id])}}">
+            <div class="formation-content flex-grow-1  d-flex align-items-center justify-content-start">
+                @if($formation->image)
+                <img class="formation-image rounded-1" src="{{asset($formation->image)}}" alt="" width="50" height="50">
+                @endif
+                <div>
+                    <div class="formation-title font-weight-bolder">{{$formation->name}}</div>
+                    <div class="formation-description text-muted">{{$formation->description}}</div>
+                    <div style="text-align: center;">
+
+                        <a href="https://www.abitech-solution.tech/inscription"class="btn btn-danger">Inscription</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="formation-follow">
+                <i class="fa fa-arrow-right"></i>
+            </div>
+        </a>
                 @endforeach
                 @include('components/pagination', ['paginator'=>$formations])
             </div>
         @endif
     </div>
-        <div class="container" style="text-align: center;">
-            <div class="col-md-6 col-md-offset-3">
-                <a href="{{ route('details') }}" class="btn btn-success">Toutes nos formations</a>
-            </div>
-        </div>
+<div class="container" style="text-align: center;">
+    <div class="col-md-6 col-md-offset-3">
+        <a href="{{ route('details') }}" class="btn btn-success">Toutes nos formations</a>
+    </div>
+</div>
 
-    <!-- About End -->
+<!-- About End -->
 @endsection

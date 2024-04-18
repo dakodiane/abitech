@@ -12,7 +12,6 @@
     <link href="{{asset('assets/styles/notify.css')}}" rel="stylesheet"/>
     <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet"/>
     <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet"/>
-    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet"/>
     <link href="{{asset('assets/fontawesome/css/all.min.css')}}" rel="stylesheet"/>
     <link id="pagestyle" href="{{asset('assets/styles/css/soft-ui-dashboard.css?v=1.0.3')}}" rel="stylesheet"/>
 

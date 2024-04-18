@@ -1,6 +1,7 @@
 @extends('layouts.user_type.auth')
 @section('content')
     <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
+
         <div class="container-fluid py-4">
             <div class="row">
                 @if($errors)
@@ -16,39 +17,139 @@
                     @endforeach
                 @endif
                 <div class="col-12">
-                    <div class="form form-group d-flex align-items-center ">
-                        @if($formation->image)
-                            <img class="formation-image rounded-1 bg-white me-3" src="{{asset($formation->image)}}" alt="" width="50" height="50">
-                        @endif
-                        <div>
-                            <h1 style="font-size: 36px; margin-bottom: 10px  !important;"class="font-weight-bolder mb-4">{{$formation->name}}</h1>
-                            <div class=" formation-date">Cree le {{$formation->created_at->format('d/m/Y')}}</div>
-                        </div>
-                    </div>
                     <div class="card mb-4">
-                        <div class="card-body p-2 pb-5">
-                            <div class="container">
-                                @if($formation->video)
-                                    <video class="formation-video" controls>
-                                        <source src="{{asset($formation->video)}}" type="video/{{\Str::afterLast($formation->video, '.')}}"/>
-                                    </video>
-                                @endif
-                                <div class="mt-5">
-                                    <h5 class="mb-0">Description</h5> <hr>
-                                    {{$formation->description}}
-                                </div>
-                                <div class="mt-5">
-                                    <h5 class="mb-0">Informations supplémentaire</h5>
-                                    <hr>
-                                    <div class="row">
-                                        @foreach(json_decode($formation->additional_information ?? '{}') as $additionalInformation)
-                                            <div class=" additional-info col-md-6 ">
-                                                <div style="font-weight: bolder">{{$additionalInformation->label}}</div>
-                                                <div class="formation-description">{{$additionalInformation->value}}</div>
-                                            </div>
+                        <div class="card-header pb-0 mb-4 d-flex align-items-center justify-content-between flex-wrap">
+                            <h6>Liste des formations ({{$formations->total()}})</h6>
+                            <div class="buttons d-flex align-items-center ">
+                                <form class="d-flex align-items-center" method="get" action="{{route('formations')}}">
+                                    <input type="text" name="search" class="form-control mx-2"placeholder="Rechercher">
+                                    <button class="btn btn-primary my-0 d-flex me-2" type="submit" role="button"><i class="fa fa-search me-2"></i> Filter </button>
+                                </form>
+                                <a class="btn btn-success my-0 d-flex" href="{{route('formation.create.view')}}" type="button" role="button">
+                                    <i class="fa fa-plus me-2"></i>
+                                    Ajouter
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body px-2 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Nom
+                                        </th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            Description
+                                        </th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            Type
+                                        </th>
+                                        <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Informations supplémentaires
+                                        </th>
+                                        <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Status
+                                        </th>
+                                        <th class=" text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            Créé le
+                                        </th>
+                                        <th class="text-secondary opacity-7">
+                                            Actions
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @if($formations->count() > 0)
+                                        @foreach($formations as $formation)
+                                            <tr class="px-2">
+                                                <td>
+                                                    <div>
+                                                        <p class="text-xs font-weight-bold mb-0">{{$formation->name}}</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <p class="text-xs font-weight-bold mb-0">
+                                                            {{\Illuminate\Support\Str::limit($formation->description, 25, $end='...')}}
+                                                            <button class="btn p-1" data-bs-toggle="popover"
+                                                                    data-bs-trigger="hover" data-bs-placement="top"
+                                                                    data-bs-content="{{$formation->description}}">
+                                                                <i class="fa fa-book"></i>
+                                                            </button>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                                <td class="align-middle ">
+                                                   <span
+                                                       class="badge @if($formation->category->active) bg-gradient-primary @else bg-gradient-danger @endif ">
+                                                           {{$formation->category->name}}
+                                                       </span>
+                                                </td>
+                                                <td class="align-middle  text-sm">
+                                                    <span
+                                                        class="text-secondary text-xs font-weight-bold">{{
+                                                    $formation->additional_information ? count(json_decode($formation->additional_information) ?? '{}').' éléments' : 'Aucun élément'
+                                                    }} </span>
+                                                </td>
+                                                <td class="align-middle ">
+                                                    <span
+                                                        class="badge @if($formation->active) bg-gradient-success @else bg-gradient-danger @endif ">
+                                                        {{$formation->active ? 'Active' : 'Inactive'}}
+                                                    </span>
+                                                </td>
+                                                <td class="align-middle ">
+                                                   <span class="text-secondary text-xs font-weight-bold">
+                                                       {{\Carbon\Carbon::parse($formation->created_at)->format('d/m/Y')}}
+                                                   </span>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center flex-wrap ">
+                                                        <a class="btn p-2 d-flex align-items-center me-1 " href="{{route('formations.details', ['id' => $formation->id])}}"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Voir">
+                                                            <i class="fa fa-eye text-success cursor-pointer"
+                                                               role="button"></i>
+                                                        </a>
+                                                        <a class="btn p-2 d-flex align-items-center me-1 " href="{{route('formations.edit', ['id' => $formation->id])}}"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Modifier">
+                                                            <i class="fa fa-edit text-primary cursor-pointer"
+                                                               role="button"></i>
+                                                        </a>
+                                                        <form
+                                                            action="{{ route('formations.toggle',[ 'id' => $formation->id ]) }}"
+                                                            method="post">
+                                                            @csrf
+                                                            @if($formation->active)
+                                                                <button class="btn p-2  d-flex align-items-center me-1 "
+                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                        title="Désactiver">
+                                                                    <i class="fa fa-times text-danger cursor-pointer"></i>
+                                                                </button>
+                                                            @else
+                                                                <button class="btn p-2 d-flex align-items-center me-1"
+                                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                        title="Activer">
+                                                                    <i class="fa fa-check text-success cursor-pointer"></i>
+                                                                </button>
+                                                            @endif
+                                                        </form>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                         @endforeach
-                                    </div>
-                                </div>
+                                    @else
+                                        <tr>
+                                            <td colspan="6" class="">
+                                                Aucune formation n'a été enregistrée.
+                                            </td>
+                                        </tr>
+                                    @endif
+
+                                    </tbody>
+                                </table>
+                                @include('components/pagination', ['paginator'=>$formations])
                             </div>
                         </div>
                     </div>

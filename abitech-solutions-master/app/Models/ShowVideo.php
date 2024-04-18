@@ -15,7 +15,7 @@ class ShowVideo extends Model
         'id',
         'name',
         'description',
-        'video',
+        'youtube_url',
         'active',
         'view',
         'created_at',

@@ -7,7 +7,7 @@
         <div class="container-fluid py-4">
             <div class="row">
                 @if($errors)
-                    {{--            errors in french --}}
+                    {{--errors in french --}}
                     @foreach ($errors->all() as $error)
                         <div
                             class="alert alert-danger alert-dismissible d-flex align-items-center justify-content-between fade show bg-gradient-danger "
@@ -88,13 +88,13 @@
                                                 </td>
                                                 <td class="align-middle text-sm">
                                                   <div class="d-flex align-items-center">
-                                                      {{--                                                     i (eye) click open viiew model--}}
+                                                      {{--i (eye) click open viiew model--}}
                                                       <button  data-bs-toggle="modal" data-bs-placement="top"
                                                                data-bs-target="#view{{$video->id}}video" title="Voir" >
                                                           Cliquer pour voir
                                                           <i class="fa fa-eye text-success cursor-pointer"></i>
                                                       </button>
-                                                      {{--                                                    modal to view video--}}
+                                                      {{--modal to view video--}}
                                                       <div class="modal fade" id="view{{$video->id}}video" tabindex="-1" role="dialog" aria-labelledby="view{{$video->id}}video" aria-hidden="true">
                                                           <div class="modal-dialog modal-dialog-centered" role="document">
                                                               <video class="modal-content" controls height="400" style="max-height: 400px" onfocusout="this.pause();">

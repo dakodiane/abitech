@@ -7,7 +7,7 @@
         <div class="container-fluid py-4">
             <div class="row">
                 @if($errors)
-                    {{--            errors in french --}}
+                    {{--errors in french --}}
                     @foreach ($errors->all() as $error)
                         <div
                             class="alert alert-danger alert-dismissible d-flex align-items-center justify-content-between fade show bg-gradient-danger "

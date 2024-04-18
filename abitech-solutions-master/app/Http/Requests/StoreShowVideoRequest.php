@@ -15,7 +15,7 @@ class StoreShowVideoRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get the validation rules that apply to the request. 'video' => ['required', 'file', 'max:204800', 'mimes:mp4,MP4,ogx,oga,ogv,ogg,webm'],
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
@@ -24,7 +24,9 @@ class StoreShowVideoRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
-            'video' => ['required', 'file', 'mimes:mp4,ogx,oga,ogv,ogg,webm'],
+            'youtube_url' => ['required', 'url', 'regex:/youtube\.com/'],
+
         ];
     }
 }
+
