@@ -14,7 +14,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Artesaos\SEOTools\Facades\SEOTools;
 
 
 class LandingController extends Controller
