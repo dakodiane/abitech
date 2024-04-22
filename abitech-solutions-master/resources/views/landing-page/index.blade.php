@@ -33,6 +33,9 @@
     <!-- Client Start -->
     @include('landing-page.homepage.clients')
     <!-- Client End -->
+ <!-- Client Start -->
+ @include('landing-page.homepage.emails')
+    <!-- Client End -->
 
 
 

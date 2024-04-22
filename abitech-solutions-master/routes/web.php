@@ -85,6 +85,18 @@ Route::post('teams/{id}/update', 'App\Http\Controllers\TeamController@update')->
 Route::get('team/details', 'App\Http\Controllers\TeamController@show')->name('details');
 
 
+//emails
+Route::get('/emails', 'App\Http\Controllers\EmailController@index')->name('emails');
+Route::get('emails/list', 'App\Http\Controllers\EmailController@index')->name('emails');
+Route::get('emails/{id}/view', 'App\Http\Controllers\EmailController@details')->name('emails.details');
+Route::post('emails/create', 'App\Http\Controllers\EmailController@sendmail')->name('emails.create');
+Route::get('emails/create', 'App\Http\Controllers\EmailController@create')->name('emails.create.view');
+Route::get('emails/{id}/edit', 'App\Http\Controllers\EmailController@edit')->name('emails.edit');
+Route::post('emails/{id}/activate', 'App\Http\Controllers\EmailController@toggleStatus')->name('emails.toggle');
+Route::post('emails/{id}/update', 'App\Http\Controllers\EmailController@update')->name('emails.update');
+Route::get('emails/details', 'App\Http\Controllers\EmailController@show')->name('details');
+
+
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
   Route::get('dashboard',  [HomeController::class, 'home'])->name('dashboard');
@@ -259,3 +271,6 @@ Route::get('dashboardformation', function () {
 Route::get('liste', 'App\Http\Controllers\AdminController@view')->name('liste');
 
 Route::get('liens', 'App\Http\Controllers\LienController@index')->name('liens');
+
+
+Route::post('getmail', 'App\Http\Controllers\EmailController@store')->name('getmail');
