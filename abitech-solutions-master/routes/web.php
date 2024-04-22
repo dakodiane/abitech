@@ -18,6 +18,7 @@ use App\Http\Controllers\TeamController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 
 
