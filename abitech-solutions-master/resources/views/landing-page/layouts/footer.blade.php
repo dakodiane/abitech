@@ -7,14 +7,11 @@
             </div>
             <div class="col-md-4 text-center d-flex justify-content-end mb-3 mb-md-0">
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/electroinfos/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://youtube.com/@abitechsolution8435" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://instagram.com/abitechsolution?igshid=ZDdkNTZiNTM=" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://wa.me/+22996395247" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/abitech-solution/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@abitechsolution?_t=8go66Ys63tt&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
-
                 </div>
             </div>
 
