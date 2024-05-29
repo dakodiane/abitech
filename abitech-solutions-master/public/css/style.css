@@ -222,14 +222,15 @@ body {
 /*** Hero Header ***/
 
 .hero-header {
-    margin-bottom: 6rem;
-    padding: 12rem 0 9rem 0;
-   background: url(../img/BACKGROUND.png) ;
-   background-color: rgba(255, 255, 255, 0.0);
-   background-blend-mode: overlay;
-   background-repeat: no-repeat;
-   background-size: cover;
+    margin-bottom: 3rem;
+    padding: 6rem 0; /* Modification de la valeur du padding */
+    background: url(../img/BACKGROUND.png);
+    background-color: rgba(255, 255, 255, 0.0);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .hero-formation {
     margin-bottom: 6rem;
     padding: 12rem 0 9rem 0;
@@ -1035,3 +1036,19 @@ h2{
   #footer .footer-newsletter form input[type=submit]:hover {
     background: #3ac162;
   }
+
+  .container-offer {
+    margin-bottom: 6rem;
+    padding: 2rem 0; /* Ajustez le padding selon vos besoins */
+    background-image: url(../img/bande.jpg); /* Utilisez background-image au lieu de background */
+    background-color: rgba(255, 255, 255, 0.0);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Centrer l'image */
+    height: fit-content; /* Ajustez la hauteur en fonction du contenu */
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+c

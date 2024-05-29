@@ -1,7 +1,11 @@
 @extends('landing-page.layouts.template')
 
 @section('content')
-
+   
+   <!-- Conditionally include Offres Start -->
+   @if($offres->where('active', 1)->count() > 0)
+       @include('landing-page.homepage.offres')
+   @endifn
     <!-- Banner Start -->
 
     @include('landing-page.homepage.banner')

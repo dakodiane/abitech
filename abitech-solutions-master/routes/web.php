@@ -53,10 +53,13 @@ Route::get('/formation', [FormationController::class, 'search'])->name('formatio
 
 Route::get('/actualites', 'App\Http\Controllers\ActualiteController@index')->name('actualite');
 
-Route::get('/detail/{id}', 'App\Http\Controllers\ActualiteController@details')->name('detail');
+Route::get('/details/{id}', 'App\Http\Controllers\ActualiteController@details')->name('detail');
+
+Route::get('/offre', 'App\Http\Controllers\OffreController@offre')->name('offre');
+
+Route::get('/detail/{id}', 'App\Http\Controllers\OffreController@detail')->name('detailoffre');
 
 Route::get('/meb', 'App\Http\Controllers\MebController@search')->name('meb');
-
 
 Route::get('/video', [ShowVideoController::class, 'search'])->name('video');
 Route::get('/formation/{id}/view', [FormationController::class, 'view'])->name('view-formation');
@@ -119,6 +122,21 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
   Route::post('actualite/{id}/update', 'App\Http\Controllers\ActualitesController@update')->name('actualites.update');
 
+  //offre
+
+  Route::get('offre/list', 'App\Http\Controllers\OffreController@index')->name('offres');
+
+  Route::post('offre/create', 'App\Http\Controllers\OffreController@store')->name('offres.create');
+
+  Route::get('offre/create', 'App\Http\Controllers\OffreController@create')->name('offres.create.view');
+
+  Route::get('offre/{id}/view', 'App\Http\Controllers\OffreController@details')->name('offres.details');
+
+  Route::get('offre/{id}/edit', 'App\Http\Controllers\OffreController@edit')->name('offres.edit');
+
+  Route::post('offre/{id}/activate', 'App\Http\Controllers\OffreController@toggleStatus')->name('offres.toggle');
+
+  Route::post('offre/{id}/update', 'App\Http\Controllers\OffreController@update')->name('offres.update');
 
 
   //  categories
@@ -271,6 +289,8 @@ Route::get('dashboardformation', function () {
 Route::get('liste', 'App\Http\Controllers\AdminController@view')->name('liste');
 
 Route::get('liens', 'App\Http\Controllers\LienController@index')->name('liens');
+Route::get('formulaires', 'App\Http\Controllers\LienController@formulaires')->name('formulaires');
+
 
 
 Route::post('getmail', 'App\Http\Controllers\EmailController@store')->name('getmail');

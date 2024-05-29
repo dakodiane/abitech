@@ -14,6 +14,12 @@ class LienController extends Controller
     
         return view('liens/index');
     }
+
+    public function formulaires()
+    {
+    
+        return view('liens/formulaires');
+    }
     
     
 }

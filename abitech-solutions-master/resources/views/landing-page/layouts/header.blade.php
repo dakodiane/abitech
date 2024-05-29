@@ -14,7 +14,7 @@
                     <a href="{{route('formation')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'formation') active @endif">Formations</a>
                     <a href="{{route('actualite')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'actualite') active @endif">Actualités</a>
                     <a href="{{route('video')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'video') active @endif">Videos</a>
-                    <a href="{{route('contact')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'contact') active @endif">Contact</a>
+                    <a href="{{route('offre')}}" class="nav-item nav-link @if(Route::currentRouteName() == 'offre') active @endif">Nos Offres</a>
                     <a href="{{ route('meb') }}" class="nav-item nav-link @if(Route::currentRouteName() == 'meb') active @endif">
                         <img src="{{ asset('img/meb.png') }}" style="width:90px;height:70px;margin-top:-30px">
                     </a>

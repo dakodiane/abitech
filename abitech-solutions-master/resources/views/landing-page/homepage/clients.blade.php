@@ -12,10 +12,10 @@
 <script>
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
-            items: 1, // Nombre d'éléments à afficher à la fois (dans ce cas, 1 image)
-            loop: true, // Pour que le carrousel soit en boucle
-            autoplay: true, // Lecture automatique
-            autoplayTimeout: 2000, // Durée de chaque diapositive (en millisecondes)
+            items: 1, 
+            loop: true, 
+            autoplay: true, 
+            autoplayTimeout: 2000,
         });
     });
 </script>

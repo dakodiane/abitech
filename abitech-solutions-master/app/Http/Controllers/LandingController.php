@@ -8,6 +8,7 @@ use App\Models\Actualite;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\Formation;
+use App\Models\Offre;
 use App\Models\Visit;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -22,9 +23,13 @@ class LandingController extends Controller
     public function index(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $latestActualites = Actualite::latest()->take(3)->get();
-       
-        return view('landing-page/index', compact('latestActualites'));
+        $offres = Offre::where('active', '1')->get(); // Exécutez la requête pour récupérer les résultats
+        
+        return view('landing-page/index', compact('latestActualites', 'offres'));
     }
+    
+
+    
     private function getShortDescription($description, $wordCount)
 {
     $words = explode(' ', $description);
