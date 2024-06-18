@@ -5,7 +5,7 @@
    <!-- Conditionally include Offres Start -->
    @if($offres->where('active', 1)->count() > 0)
        @include('landing-page.homepage.offres')
-   @endifn
+   @endif
     <!-- Banner Start -->
 
     @include('landing-page.homepage.banner')
@@ -38,8 +38,8 @@
     @include('landing-page.homepage.clients')
     <!-- Client End -->
  <!-- Client Start -->
- @include('landing-page.homepage.emails')
-    <!-- Client End -->
+ @include('landing-page.homepage.emails', ['id' => 'newsletter'])
+     <!-- Client End -->
 
 
 

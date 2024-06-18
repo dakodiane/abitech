@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^nous-meet\.com$ [NC]
+RewriteRule ^(.*)$ http://nous-meet/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} !Nous/public/
+RewriteRule (.*) /Nous/public/$1 [L]

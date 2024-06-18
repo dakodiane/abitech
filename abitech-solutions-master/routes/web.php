@@ -1,7 +1,4 @@
 <?php
-
-
-
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ChangePasswordController;
@@ -17,6 +14,7 @@ use App\Http\Controllers\ShowVideoController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 
@@ -42,8 +40,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
 Route::get('/', 'App\Http\Controllers\LandingController@index')->name('welcome');
+
+Route::get('/newsletter', function () {
+  return Redirect::to('/#newsletter');
+});
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
@@ -166,6 +167,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
   Route::post('formations/{id}/activate', [FormationController::class, 'toggleStatus'])->name('formations.toggle');
 
   Route::post('formations/{id}/update', [FormationController::class, 'update'])->name('formations.update');
+
+    Route::get('formations/details', [FormationController::class, 'show'])->name('details');
+
+   
 
 
 

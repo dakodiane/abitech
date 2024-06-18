@@ -9,7 +9,7 @@
                 <div class="d-flex pt-2">
                    <span class="border-bottom" href="#">Mon Entreprise en Bref:</span>
                     <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/monentrepriseen_bref?igsh=d3pzYmg0ODBiNDQw" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://tiktok.com/@mon_entreprise_en_bref24" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@ulrich.abitech?_t=8n742vq3rW4&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div class="col-md-4 text-center d-flex justify-content-end mb-3 mb-md-0">
@@ -20,6 +20,8 @@
                     <a class="btn btn-outline-light btn-social" href="https://instagram.com/abitechsolution?igshid=ZDdkNTZiNTM=" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://wa.me/+22996395247" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/abitech-solution/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://link.radioking.com/canalabitech-online" target="_blank"><i class="fa fa-play-circle"></i></a>
+                
                 </div>
             </div>
 
