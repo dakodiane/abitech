@@ -14,15 +14,6 @@
     </div>
 </div>
 
-<style>
-    .custom-card-image {
-    width: 600px; /* Largeur souhaitée */
-    height: 300px; /* Hauteur souhaitée */
-    object-fit: cover; /* Pour conserver les proportions de l'image */
-}
-
-</style>
-
 
 <div class="container-fluid">
     <div class="row">
@@ -54,7 +45,14 @@
     /*-----------------------------------------------------------------------------------*/
     /*  2 - BASE
 /*-----------------------------------------------------------------------------------*/
-
+.custom-card-image {
+        width: 600px;
+        /* Largeur souhaitée */
+        height: 300px;
+        /* Hauteur souhaitée */
+        object-fit: cover;
+        /* Pour conserver les proportions de l'image */
+    }
     body {
         overflow-x: hidden;
         font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;

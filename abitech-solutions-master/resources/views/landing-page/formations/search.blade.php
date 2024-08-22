@@ -22,42 +22,40 @@
     </div>
 </div>
 <div class="container">
-        <h3> Resultat(s): {{$formations->total()}}</h3>
-        <form class="horizontal-scroll">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="me-3">
-                    Filtrer par categorie:
-                </div>
-                <div class="formation-categories flex-grow-1">
-                    @foreach($categories as $category)
-                        <a id="{{$category->id}}" class="me-2 p-3 btn formation-category @if(in_array($category->id, request()->query('categories') ?? [])) active @endif"
-                           href="{{
+    <h3> Resultat(s): {{$formations->total()}}</h3>
+    <form class="horizontal-scroll">
+        <div class="d-flex align-items-center justify-content-start">
+            <div class="me-3">
+                Filtrer par categorie:
+            </div>
+            <div class="formation-categories flex-grow-1">
+                @foreach($categories as $category)
+                <a id="{{$category->id}}" class="me-2 p-3 btn formation-category @if(in_array($category->id, request()->query('categories') ?? [])) active @endif" href="{{
                             route('formation', [
                             'search'=>request()->query('search'),
                             'categories'=> (request()->query('$categories') ?? [$category->id])
                             ]
-                            )}}"
-                        >
-                            {{$category->name}}
-                        </a>
+                            )}}">
+                    {{$category->name}}
+                </a>
 
-                    @endforeach
-                </div>
-                @if(request()->query('search') || request()->query('categories'))
-                    <a class="btn"  href="{{route('formation')}}" type="button"  data-toggle="tooltip" data-placement="top" title="Effacer le filtre">
-                        <i class="fa fa-times text-danger"  style="font-size: 25px"></i>
-                    </a>
-                @endif
+                @endforeach
             </div>
-        </form>
-        @if(count($formations) == 0)
-            <div class="formation-empty d-flex align-items-center justify-content-center">
-                Aucune formation disponible
-            </div>
-        @else
-            <div class="formations-results mt-4">
-                @foreach($formations as $formation)
-                <a class="formation d-flex align-items-center shadow p-4 my-3" href="{{route('view-formation', ['id'=>$formation->id])}}">
+            @if(request()->query('search') || request()->query('categories'))
+            <a class="btn" href="{{route('formation')}}" type="button" data-toggle="tooltip" data-placement="top" title="Effacer le filtre">
+                <i class="fa fa-times text-danger" style="font-size: 25px"></i>
+            </a>
+            @endif
+        </div>
+    </form>
+    @if(count($formations) == 0)
+    <div class="formation-empty d-flex align-items-center justify-content-center">
+        Aucune formation disponible
+    </div>
+    @else
+    <div class="formations-results mt-4">
+        @foreach($formations as $formation)
+        <a class="formation d-flex align-items-center shadow p-4 my-3" href="{{route('view-formation', ['id'=>$formation->id])}}">
             <div class="formation-content flex-grow-1  d-flex align-items-center justify-content-start">
                 @if($formation->image)
                 <img class="formation-image rounded-1" src="{{asset($formation->image)}}" alt="" width="50" height="50">
@@ -67,7 +65,7 @@
                     <div class="formation-description text-muted">{{$formation->description}}</div>
                     <div style="text-align: center;">
 
-                        <a href="https://www.abitech-solution.tech/inscription"class="btn btn-danger">Inscription</a>
+                        <a href="https://www.abitech-solution.tech/inscription" class="btn btn-danger">Inscription</a>
 
                     </div>
                 </div>
@@ -76,29 +74,16 @@
                 <i class="fa fa-arrow-right"></i>
             </div>
         </a>
-                @endforeach
-                @include('components/pagination', ['paginator'=>$formations])
-            </div>
-        @endif
+        @endforeach
+        @include('components/pagination', ['paginator'=>$formations])
     </div>
-<<<<<<< HEAD
+    @endif
+</div>
 <div class="container" style="text-align: center;">
     <div class="col-md-6 col-md-offset-3">
-        <a href="{{ route('details') }}" class="btn btn-success">Toutes nos formations</a>
+        <a href="{{ route('forma.details') }}" class="btn btn-success">Toutes nos formations</a>
     </div>
 </div>
 
 <!-- About End -->
 @endsection
-=======
-    <div class="row">
-        <br><br><br><a href="{{route('details')}}" type="button" class="btn btn-primary">Toutes nos formations</a>
-    </div>
-
-    <!-- About End -->
-@endsection
-
-        
-    
-      
->>>>>>> 2332b282ffe9bfb593de64127ec19f518491f5ea

@@ -9,7 +9,7 @@
                     <div class="carousel-inner">
                         @foreach($offres as $key => $offre)
                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <h2 class="fs-4">{{ $offre->nom }}</h2>
+                            <h2 class="fs-4" style="color: white;">{{ $offre->nom }}</h2>
                             <a href="{{ route('detailoffre', ['id' => $offre->id]) }}" class="btn btn-danger rounded-pill border-2 py-3 px-5 animated slideInRight">Détails</a>
                         </div>
                         @endforeach
