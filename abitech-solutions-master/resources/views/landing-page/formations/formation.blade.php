@@ -17,12 +17,15 @@
           <div class="col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="box-content" style="height: 220px;">
-                            <br><h5 style="color:#fff"  class="box-title">Formation en duo</h5>  
+                            <br><h5 style="color:#fff"  class="box-title">Mise à niveau/Recyclage</h5>  
                             <p>
                                 <li style="color:#fff">Tous types de formations informatiques</li>
                                 <li style="color:#fff">Durée: varie selon la formation</li>
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p> 
+                            <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                            </div>
                         </div>
             </div>
             </div>
@@ -35,6 +38,9 @@
                                 <li style="color:#fff">Durée: varie selon la formation</li>
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p>
+                            <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                            </div>
                         </div>
             </div>
           </div>
@@ -47,10 +53,13 @@
                                 <li style="color:#fff">Durée: varie selon la formation</li>
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p>
+                            <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                            </div>
                         </div>
             </div>
           </div>
-          <div class="col-md-4 mt-4 mt-md-0">
+          <!-- <div class="col-md-4 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
             <div class="box-content" style="height: 220px;overflow: auto;">
                             <h5  class="box-title" style="color:#fff">Formation d'entreprise</h5>  
@@ -62,7 +71,7 @@
                         </div>
             </div>
           </div>
- 
+  -->
          
         </div>
 
@@ -77,7 +86,60 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6 mt-4 mt-md-0">
+
+        <div class="col-md-4 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="box-content" style="height: 220px;">
+                            <br><h5 style="color:#fff"  class="box-title">Informatique</h5>  
+                            <p>
+                                <li style="color:#fff">Logiciel</li>
+                                <li style="color:#fff">Application</li>
+                                <li style="color:#fff">Initiation</li> 
+                                <li style="color:#fff">Renforcement des capacités</li>
+                                <li style="color:#fff">Gestion et modulations des unités statistique</li>
+                            </p> 
+                            <!-- <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Demander une formation </button>
+                            </div> -->
+                        </div>
+            </div>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="box-content" style="height: 220px;">
+                            <h5  class="box-title " style="color:#fff" >Marketing</h5>  
+                            <p>
+                                <li style="color:#fff">Renforcement des capacités</li>
+                                <li style="color:#fff">Technique commerciales</li>
+                                <li style="color:#fff">Gestion clients</li>
+                                <li style="color:#fff">Methodes et plannification</li>
+                                <li style="color:#fff">Consitution de base de données</li> 
+                            </p>
+                            <!-- <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Demander une formation </button>
+                            </div> -->
+                        </div>
+            </div>
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="box-content" style="height: 220px;">
+                            <h5  class="box-title" style="color:#fff">Formation et commerce</h5>  
+                            <p>
+                                <li style="color:#fff">Technique commerciale</li>
+                                <li style="color:#fff">Base de données</li>
+                                <li style="color:#fff">Expertise de financement</li> 
+                                <li style="color:#fff">Technique et approche de validation de projet</li>
+                                <li style="color:#fff">Gestion comptables</li>
+                                <li style="color:#fff">Renforcement des capacités</li>
+                            </p>
+                            <!-- <div class="col-8">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Demander une formation </button>
+                            </div> -->
+                        </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-card-checklist"></i>
            
@@ -134,6 +196,14 @@
             </div>
           </div>
          
+        </div> -->
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="d-flex flex-column align-items-center text-center">
+        <h5 class="mb-3 text-white">Besoin d'un expert pour votre formation ?</h5>
+        <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander ici</button>
+        </div>
+
         </div>
 
       </div>
@@ -195,6 +265,10 @@
                     </form>
                 </div>
             </div>
-
+            <script>
+        function scrollToForm() {
+            document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
     <!-- About End -->
 @endsection
