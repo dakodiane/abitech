@@ -5,10 +5,13 @@
 
            <div class="row gy-4">
                <div class="row">
-                   <div class="col-lg-12">
-                       <h2>ACTUALITES</h2>
+               <div class="col-lg-12">
+    <h2>ACTUALITES</h2>
+    <div class="d-flex justify-content-center">
+        <a href="{{ route('actualite') }}" class="btn btn-danger">Tous les articles</a>
+    </div>
+</div>
 
-                   </div>
         
                </div>
                @foreach ($latestActualites as $actualite)
