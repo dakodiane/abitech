@@ -24,8 +24,11 @@
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p> 
                             <div class="col-8">
-                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSehjKCP3uHIE1V1GQLLHdM7SPGKgTryPjeVYhAJcUo4DXHNdQ/viewform?usp=pp_url" class="w-100">
+                                    <button class="btn btn-primary w-100 py-3" type="button">Demander une formation</button>
+                                </a>
                             </div>
+
                         </div>
             </div>
             </div>
@@ -39,7 +42,9 @@
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p>
                             <div class="col-8">
-                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSehjKCP3uHIE1V1GQLLHdM7SPGKgTryPjeVYhAJcUo4DXHNdQ/viewform?usp=pp_url" class="w-100">
+                                    <button class="btn btn-primary w-100 py-3" type="button">Demander une formation</button>
+                                </a>
                             </div>
                         </div>
             </div>
@@ -54,7 +59,9 @@
                                 <li style="color:#fff">Coût: varie selon la durée et la formation</li> 
                             </p>
                             <div class="col-8">
-                                <button class="btn btn-primary w-100 py-3" type="button" onclick="scrollToForm()">Demander une formation </button>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSehjKCP3uHIE1V1GQLLHdM7SPGKgTryPjeVYhAJcUo4DXHNdQ/viewform?usp=pp_url" class="w-100">
+                                    <button class="btn btn-primary w-100 py-3" type="button">Demander une formation</button>
+                                </a>
                             </div>
                         </div>
             </div>
